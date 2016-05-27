@@ -5,5 +5,7 @@
 	function add doctor(){
 		//
 	}
-	
+	function edit doctor(){
+		//
+	}
 ?>
