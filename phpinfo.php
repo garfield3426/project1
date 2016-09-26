@@ -2,10 +2,10 @@
 	//all the infomation
 	echo phpinfo();
 	//add function
-	function addDoctor(){
+	function add doctor(){
 		//
 	}
-	function editDoctor(){
+	function edit doctor(){
 		//
 	}
 ?>
