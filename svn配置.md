@@ -22,7 +22,7 @@ svn import /pkg/web/www.demo.com svn://localhost/demo -m “add code for pr021 w
 [users]
 harry = harryssecret
 
-sally = sallyssecret
+maorq = 123456
 
 pm = pm_pw
 
@@ -62,6 +62,17 @@ authz-db =  authz
 #####8、启动服务器
 
 svnserve -d -r /home/svn
+
+#####9、服务器上导版本库
+
+svn co svn://localhost/demo  /pkg/web/www.demo.com --username maorq --password 123456
+
+#####10、服务器上删除内容并提交到版本库
+
+svn del a.html
+
+svn ci -m 'del a file'
+
 
 
 
