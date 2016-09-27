@@ -24,5 +24,6 @@ function tree($directory)
 		}		
 	} 
 	echo "</ul>\n"; 
+	
 	$mydir->close(); 
 } 
