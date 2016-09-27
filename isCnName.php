@@ -19,7 +19,9 @@ function tree($directory)
 			tree("$directory/$file"); 
 		} elseif(preg_match("/[\x7f-\xff]/", $file)){
 			echo "<li>$directory/$file</li>\n"; 
-		}	
+		}elseif(preg_match("/[\x7f-\xff]/", $directory)){
+			echo "<li>$directory</li>\n"; 
+		}		
 	} 
 	echo "</ul>\n"; 
 	$mydir->close(); 
