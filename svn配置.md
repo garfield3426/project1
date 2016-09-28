@@ -74,5 +74,33 @@ svn del a.html
 svn ci -m 'del a file'
 
 
+##问题：
+
+#####1、将项目导致版本库时报错：svn: Error converting entry in directory ‘.’ to UTF-8.
+
+解决办法：export LANG="en_US.UTF-8"
+
+#####2、点击“与前一个版本比较”报错“unreadable path encountered； access denied”
+
+解决办法:编辑[代码仓库目录下]/conf/svnserve.conf
+
+1. 将[anon-access]的值设置为[none]。如下：
+
+[general]
+
+\### These options control access to the repository for unauthenticated
+\### and authenticated users.  Valid values are "write", "read",
+\### and "none".  The sample settings below are the defaults.
+
+\# anon-access = read
+
+anon-access = none
+
+2. 重启SVN服务了。
+
+killall -HUP svnserve
+
+svnserve -d -r /alidata/svn
+
 
 
