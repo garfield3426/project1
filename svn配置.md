@@ -88,11 +88,11 @@ svn ci -m 'del a file'
 
 [general]
 
-### These options control access to the repository for unauthenticated
-### and authenticated users.  Valid values are "write", "read",
-### and "none".  The sample settings below are the defaults.
+\### These options control access to the repository for unauthenticated
+\### and authenticated users.  Valid values are "write", "read",
+\### and "none".  The sample settings below are the defaults.
 
-# anon-access = read
+\# anon-access = read
 
 anon-access = none
 
