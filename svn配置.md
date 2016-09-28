@@ -84,19 +84,21 @@ svn ci -m 'del a file'
 
 解决办法:编辑[代码仓库目录下]/conf/svnserve.conf
 
-1. 将[anon-access]的值设置为[none]。如下：
+1、将[anon-access]的值设置为[none]。如下：
 
 [general]
 
 \### These options control access to the repository for unauthenticated
+
 \### and authenticated users.  Valid values are "write", "read",
+
 \### and "none".  The sample settings below are the defaults.
 
 \# anon-access = read
 
 anon-access = none
 
-2. 重启SVN服务了。
+2、重启SVN服务了。
 
 killall -HUP svnserve
 
