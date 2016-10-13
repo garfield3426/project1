@@ -136,3 +136,27 @@ function sizecount($size) {
 /* 示例
 echo sizecount(1024 * 1024 * 1024);    //  1 GB */
 
+/* 获取指定目录下所有文件路径
+array file_tree(string $path); */
+function file_tree($path) {
+	$files = array();
+	$ds = glob($path . '/*');
+	if (is_array($ds)) {
+		foreach ($ds as $entry) {
+			if (is_file($entry)) {
+				$files[] = $entry;
+			}
+			if (is_dir($entry)) {
+				$rs = file_tree($entry);
+				foreach ($rs as $f) {
+					$files[] = $f;
+				}
+			}
+		}
+	}
+	return $files;
+}
+/* //示例
+$files = file_tree('E:\phpStudy\WWW\GitHub\project1');
+echo '<pre/>';
+print_r($files); */
