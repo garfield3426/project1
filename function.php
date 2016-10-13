@@ -119,3 +119,20 @@ function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
 /* 示例
 echo authcode('hello-world', 'ENCODE');    //  b3ae8oQNH91yF4oshY+8PiBuoSfDSrwoWzYrrmpyIG03c6B3FYFlCA */
 
+/* 格式化显示文件大小
+string sizecount(int $size); */
+function sizecount($size) {
+	if($size >= 1073741824) {
+		$size = round($size / 1073741824 * 100) / 100 . ' GB';
+	} elseif($size >= 1048576) {
+		$size = round($size / 1048576 * 100) / 100 . ' MB';
+	} elseif($size >= 1024) {
+		$size = round($size / 1024 * 100) / 100 . ' KB';
+	} else {
+		$size = $size . ' Bytes';
+	}
+	return $size;
+}
+/* 示例
+echo sizecount(1024 * 1024 * 1024);    //  1 GB */
+
