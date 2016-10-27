@@ -1,0 +1,31 @@
+body,div,dt,dl,dd,li,ul,a,h1,h2,h3,h4,h5,h6,form,p,input,text{
+	margin:0;
+	padding:0;
+	font-family:"Times New Roman",Georgia,Arial,sans-Serif;
+}
+ol,ul,li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+	color:#fff;
+}
+
+img{
+	border:none;
+	display:block;
+}
+
+.clearfloat{
+	zoom:1;
+}
+
+.clearfloat:after{
+	content:".";
+	display:block; 
+	height:0; 
+	visibility:hidden; 
+	clear:both; 
+}
